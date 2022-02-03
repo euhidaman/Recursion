@@ -2,19 +2,19 @@ package com.recursion;
 
 import java.util.Scanner;
 
-public class sumOfDigits {
+public class ProductofDigits {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
 
-        System.out.println(sumDig(num));
+        System.out.println(prodDig(num));
     }
 
-    static int sumDig(int num)
+    static int prodDig(int num)
     {
         if(num == 0)
-            return 0;
+            return 1;
 
-        return (num%10)+ sumDig(num/10);
+        return (num%10)*prodDig(num/10);
     }
 }
