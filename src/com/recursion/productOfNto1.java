@@ -1,2 +1,20 @@
-package com.recursion;public class productOfNto1 {
+package com.recursion;
+
+import java.util.Scanner;
+
+public class productOfNto1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(prod(n));
+    }
+
+    static int prod(int n)
+    {
+        if(n==1)
+            return 1;
+
+        return n*prod(n-1);
+    }
 }
