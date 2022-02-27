@@ -1,9 +1,10 @@
 package binarySearchProblems;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
-// find the number in array >= key
-public class ceilingNumber {
+// find the number in array <= key
+public class stepNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -17,8 +18,8 @@ public class ceilingNumber {
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
 
-        // when, greatest number in array is smaller than key--> Then NO ceiling number is present in array
-        if(key > arr[arr.length-1])
+        // when, smallest number in array is smaller than key--> Then NO step number is present in array
+        if(key < arr[0])
         {
             System.out.println(-1);
             System.exit(0);
@@ -48,7 +49,7 @@ public class ceilingNumber {
 
         if(!found)
         {
-            System.out.println(arr[left]);
+            System.out.println(arr[right]);
         }
     }
 }
